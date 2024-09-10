@@ -137,7 +137,7 @@ customPDE<dim, degree>::explicitEquationRHS(
   // For order parameter (gamma is a variable order parameter mobility factor)
   scalarvalueType eq_phi =
     phi - constV(userInputs.dtValue * MnV) * gamma *
-          ((fbV - faV) * hnV - (c_beta - c_alpha) * fbcV * hnV + H_barrier * fbarriernV);
+          ((fbV - faV) * pnV - (c_beta - c_alpha) * fbcV * pnV + H_barrier * fbarriernV);
 
   // --- Submitting the terms for the governing equations ---
 
